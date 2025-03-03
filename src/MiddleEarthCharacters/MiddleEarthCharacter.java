@@ -10,5 +10,6 @@ public abstract class MiddleEarthCharacter {
 		this.name = name;
 		this.health = health;
 		this.power = power;
+		//practice
 	}
 }
