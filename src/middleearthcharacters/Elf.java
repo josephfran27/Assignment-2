@@ -1,4 +1,4 @@
-package MiddleEarthCharacters;
+package middleearthcharacters;
 
 
 public class Elf extends MiddleEarthCharacter {
