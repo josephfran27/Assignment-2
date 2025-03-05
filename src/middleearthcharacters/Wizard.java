@@ -33,11 +33,17 @@ public class Wizard extends MiddleEarthCharacter{
 			target.health -= (this.power * 1.5);
 			return true;
 		}
-		else {
-			System.out.println("Attacking an Elf or Orc with regular power!");
+		else if(target.getRace() == "Elf"){
+			System.out.println("Attacking Elf with regular power!");
 			target.health -= this.power;
 			return true;
 		}
+		else if(target.getRace() == "Orc"){
+			System.out.println("Attacking Orc with regular power!");
+			target.health -= this.power;
+			return true;
+		}
+		return false;
 	}
 
 	/**

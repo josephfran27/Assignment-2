@@ -30,6 +30,7 @@ public class CharacterManager {
 	 */
 	public boolean addCharacter(MiddleEarthCharacter c) {
 		if(c == null) {
+			System.out.println("Error adding character.");
 			return false;
 		}
 		if(size == characters.length) {
@@ -38,7 +39,7 @@ public class CharacterManager {
 			System.out.println("Doubling capacity. New length is: " + characters.length);
 		}
 		characters[size++] = c;
-		System.out.println("Character has been successfully added, size is currently: "+ size + ".");
+		System.out.println(c.getName() + " has been successfully added, size is currently: "+ size + ".");
 		return true;
 	}
 	
@@ -69,18 +70,20 @@ public class CharacterManager {
 	 * @return: This method returns true if the character is updated or false if an identical object already exists or if 
 	 * the character object is invalid.
 	 */
-	public boolean updateCharacter(MiddleEarthCharacter character, String name, int health, int power) {
+	public boolean updateCharacter(MiddleEarthCharacter character, String name, double health, double power) {
 		if(character != null) {
 			//check if identical character object already exists
 			if(character.getName().equals(name) && character.getHealth() == health && character.getPower() == power) {
-				System.out.println("This character already exists.");
+				System.out.println("This character (" + character.getName() + ") already exists.");
 				return false;
 			}
 			character.setName(name);
 			character.setHealth(health);
 			character.setPower(power);
+			System.out.println(character.getName() + " has been updated!");
 			return true;
 		}
+		System.out.println("Error updating character.");
 		return false;
 	}
 	
@@ -102,7 +105,7 @@ public class CharacterManager {
 				}
 				characters[size-1] = null;
 				size--;
-				System.out.println("Removing " + character.getName() + ", new size is " + size);
+				System.out.println("Removing " + character.getName() + ", new size is " + size + ".");
 				return true;
 			}
 		}

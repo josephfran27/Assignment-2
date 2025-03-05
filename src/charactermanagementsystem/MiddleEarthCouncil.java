@@ -13,7 +13,7 @@ public class MiddleEarthCouncil {
 	}
 	
 	/**
-	 * This method creates a singular instance of the MiddleEarthCouncil so that there aren't 
+	 * This method creates a singular static instance of the MiddleEarthCouncil so that there aren't 
 	 * issues with having more than one instance, supporting the singleton pattern.
 	 * @return: This method returns a new MiddleEarthCouncil instance or an existing one.
 	 */

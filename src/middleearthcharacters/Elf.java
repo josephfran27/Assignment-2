@@ -34,11 +34,17 @@ public class Elf extends MiddleEarthCharacter {
 			target.health -= (this.power * 1.5);
 			return true;
 		}
-		else {
-			System.out.println("Attacking Human or Wizard with regular power!");
+		else if(target.getRace() == "Human"){
+			System.out.println("Attacking Human with regular power!");
 			target.health -= this.power;
 			return true;
 		}
+		else if(target.getRace() == "Wizard"){
+			System.out.println("Attacking Wizard with regular power!");
+			target.health -= this.power;
+			return true;
+		}
+		return false;
 	}
 
 	/**
