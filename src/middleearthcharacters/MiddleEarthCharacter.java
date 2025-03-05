@@ -18,6 +18,10 @@ public abstract class MiddleEarthCharacter {
 	public void displayInfo() {
 		System.out.println("Name: " + this.name + ", Health: " + this.health + ", Power: " + this.power);
 	}
+	
+	public String getName() {
+		return this.name;
+	}
 		
 
 }
