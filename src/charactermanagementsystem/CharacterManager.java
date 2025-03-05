@@ -117,6 +117,7 @@ public class CharacterManager {
 	 * the information of each character line by line.
 	 */
 	public void displayAllCharacters() {
+		System.out.println("Displaying all characters...");
 		for(int i = 0; i < size; i++) {
 			characters[i].displayInfo();
 		}

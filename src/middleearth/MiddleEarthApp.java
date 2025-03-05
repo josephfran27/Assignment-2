@@ -11,6 +11,12 @@ import middleearthcharacters.Wizard;
 public class MiddleEarthApp {
 
 	public static void main(String[] args) {
+		
+		System.out.println("MIDDLE EARTH CHARACTER MANAGEMENT SYSTEM.");
+		Menu menu = new Menu();
+		menu.displayMenu();
+		
+		/*
 		MiddleEarthCouncil council = MiddleEarthCouncil.getInstance();
 		CharacterManager manager = council.getCharacterManager();
 		
@@ -74,7 +80,7 @@ public class MiddleEarthApp {
 		
 		System.out.println("\nDisplaying characters after battle...");
 		manager.displayAllCharacters();
-
+		*/
 	}
 
 }
