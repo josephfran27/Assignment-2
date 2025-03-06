@@ -16,14 +16,22 @@ public class Menu {
 	private Scanner scanner;
 	private CharacterManager manager;
 	
+	/**
+	 * This is the Menu object constructor, which initializes the scanner for input. It also
+	 * creates an instance of the characterManager system from the MiddleEarthCouncil.
+	 */
 	public Menu() {
 		scanner = new Scanner(System.in);
 		
-		//initialize council and character manager
 		MiddleEarthCouncil council = MiddleEarthCouncil.getInstance();
 		manager = council.getCharacterManager();
 	}
 	
+	/**
+	 * This method displays the primary menu and accepts the different user inputs to perform the
+	 * different CRUD operations. It uses a do while loop, so that it repeats until the user chooses
+	 * 6 to exit the program.
+	 */
 	public void displayMenu() {
 		int option;
 		do {
@@ -66,6 +74,10 @@ public class Menu {
 		while (option != 6);
 	}
 	
+	/**
+	 * This method adds a new character using the user input through a switch case. It creates the character after the user
+	 * chooses all of the fields of the character, and adds it to the character manager.
+	 */
 	private void addCharacter() {
 		//get fields for character
 		System.out.println("Enter the number corresponding with the race of the character that you want to add.");
@@ -110,6 +122,10 @@ public class Menu {
 		manager.addCharacter(character);
 	}
 	
+	/**
+	 * This method updates the different fields of an existing character. It accepts a name and it applies the new
+	 * fields.
+	 */
 	private void updateCharacter() {
 		System.out.println("Enter the name of the character that you want to update:");
 		String name = scanner.nextLine();
@@ -129,6 +145,10 @@ public class Menu {
 		manager.updateCharacter(character, character.getName(), newHealth, newPower);
 	}
 	
+	/**
+	 * This method deletes a character from the character manager. It takes the name as an input
+	 * and deletes the character if it exists.
+	 */
 	private void deleteCharacter() {
 		System.out.println("Enter the name of the character that you want to delete: ");
 		String name = scanner.nextLine();
@@ -146,6 +166,12 @@ public class Menu {
 		manager.displayAllCharacters();
 	}
 	
+	/**
+	 * This method supports the attack feature of the different characters. The user first chooses a character
+	 * to attack with, then they choose a character that they would like to attack. The attack method invoked from the 
+	 * characterManager class will return the different attack actions and the effects of the attacks on the different 
+	 * characters.
+	 */
 	private void attackCharacter() {
 		System.out.println("Who do you want to attack with? (Enter name): ");
 		String name = scanner.nextLine();
