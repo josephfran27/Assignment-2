@@ -16,6 +16,11 @@ public class MiddleEarthApp {
 		Menu menu = new Menu();
 		menu.displayMenu();
 		
+		/*I saw that the assignment explanation wanted all of the characters attack actions to be displayed, so I hard
+		coded multiple characters of different races and called their attack ability against each race so that their different
+		attack strengths can be displayed. To do this I figured it would be easiest to start off with the menu option and then
+		in order to display the different attacks, one can uncomment the rest of my main and comment out the menu calling.
+		
 		/*
 		MiddleEarthCouncil council = MiddleEarthCouncil.getInstance();
 		CharacterManager manager = council.getCharacterManager();
